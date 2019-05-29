@@ -21,10 +21,12 @@
 
 ## 交互
 
+```bash
 client --- upgrade   --> server
 client <-- switching --- server
 client --- message   --> server
 client <-- message   --- server
+```
 
 ## 传输原理
 
@@ -84,11 +86,14 @@ client <-- message   --- server
 
 ## 单机架构
 
+```bash
 长链接1 -- 长链接2 -- 长链接3
 集合0   -- 集合1  -- 集合2
 分发  -- 分发 -- 分发
 消息打包 + 编码 
 消息1 -- 消息2 -- 消息3
+
+```
 
 ## 分布式架构
 
@@ -103,10 +108,13 @@ client <-- message   --- server
 Q：不知道哪个直播间在哪个网关节点
 A：全广播 or 逻辑集群
 
+```bash
 连接1 -- 连接2 -- 连接3
 --------- LB ---------
 网关1 -- 网关2 -- 网关3
 logic -- logic <-- 业务方
+
+```
 
 #### 逻辑集群
 
